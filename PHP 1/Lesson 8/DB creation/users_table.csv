@@ -1,0 +1,3 @@
+id,login,password,role
+1,admin,$2y$10$rArtGPOzhn4R0q./IGaxTeUg6.viEVt8PnL7vF6ezrxFBenQ5V20C,admin
+2,user,$2y$10$cBAsSNI040MhcfEwSBZu2OqwJsxR72gtEOV354Ud022loe8EjMFCu,customer
