@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catalog{% endblock %}
+
+{% block main %}
+    <div class="products_block">
+        {% for p in products %}
+            <div class="catalog_item">
+                <a href="{{ path('product', {'id':p.id}) }}"><img src="/gb/public/images/{{ p.image }}" alt="product"></a>
+                <a href="{{ path('product', {'id':p.id}) }}"><span class="product_title">{{ p.title }}</span></a>
+                <span>{{ p.description }}</span>
+                <span>{{ p.price }} руб.</span>
+
+                <form method='post' enctype='multipart/form-data' action="{{ path('cartadd') }}">
+                    <input type='hidden' name='product_id' value="{{ p.id }}">
+                    <input type='submit' name='to_cart' value='В корзину'>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
