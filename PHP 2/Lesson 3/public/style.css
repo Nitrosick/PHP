@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:active, :focus {
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Calibri;
+    color: white;
+    background-color: #303030;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    padding: 10px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.plug {
+    flex-grow: 1;
+}
+
+.images_box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+img {
+    cursor: pointer;
+}
+
+.image {
+    width: 320px;
+    margin: 5px;
+}
+
+.image:hover {
+    transform: scale(1.03);
+    transition: 0.4s;
+}

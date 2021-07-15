@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:active, :focus {
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Calibri;
+    color: white;
+    background-color: #303030;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .icon_link {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+header .icon_link img {
+    width: 100%;
+}
+
+.user_name {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 5px 0 10px;
+}
+
+footer {
+    padding: 10px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.products_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product_tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+
+.picture {
+    margin: 10px 10px 0 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.picture:hover {
+    transform: scale(1.05);
+}
+
+.product_title {
+    width: 80px;
+    text-align: center;
+    border-bottom: 1px dashed white;
+    padding-bottom: 5px;
+}
+
+.product_pre_cost {
+    width: 80px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    padding: 5px 0;
+}
+
+.product_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product_name {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product_slot,
+.product_cost,
+.product_value {
+    margin: 10px 0;
+    max-width: 350px;
+    align-self: flex-start;
+}
+
+.product_text {
+    margin: 15px 0;
+    padding: 10px 5px;
+    max-width: 350px;
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.product_views {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.plug {
+    flex-grow: 1;
+}
+
+.admin_product {
+    width: 800px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.admin_image {
+    height: 100%;
+}
+
+.admin_name {
+    margin: 0 15px;
+}
+
+.admin_span {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.button {
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.add_product {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.add_page {
+    position: relative;
+    max-width: 400px;
+    font-size: 20px;
+}
+
+form {
+    max-width: 400px;
+}
+
+input, select {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    background-color: rgba(0,0,0,0.4);
+    font-family: Calibri;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    background-color: transparent;
+}
+
+input[type="submit"] {
+    width: 100%;
+}
+
+.cancel,
+.register {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.cancel:hover,
+.register:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.edit_image {
+    position: absolute;
+    top: 15px;
+    left: -100px;
+    width: 80px;
+}
+
+.add_to_cart {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.cart_total {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.orders_page {
+    max-width: 1600px;
+}
+
+th {
+    padding: 10px 20px;
+    text-align: left;
+    background-color: rgba(0,0,0,0.4);
+}
+
+td {
+    padding: 10px 20px;
+    text-align: left;
+    border-top: 1px dashed white;
+}
+
+td input {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.order_button {
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.order_button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.button_cell {
+    padding: 0;
+}
+
+.order_refresh {
+    background-image: url(icons/refresh.png);
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    margin: 0 5px;
+}
