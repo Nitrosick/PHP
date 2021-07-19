@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cart{% endblock %}
+
+{% block main %}
+    <div class="products_block">
+        {% for c in cart %}
+            <div class="catalog_item">
+                <span class="product_title">{{ c.product_info.title }}</span>
+                <span>{{ c.product_info.price }} руб.</span>
+                <span>{{ c.quantity }} шт.</span>
+                <a href="{{ path('cartremove', {'id':c.id}) }}">Удалить</a>
+            </div>
+        {% endfor %}
+        <div class="catalog_item" style="background-color: #303030">
+            <span class="product_title">Сумма заказа {{ total }} руб.</span>
+            <a href="{{ path('order', {'id':'1', 'total':total}) }}">Сделать заказ</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Orders{% endblock %}
+
+{% block main %}
+    <div class="products_block">
+        {% for o in orders %}
+            <div class="catalog_item">
+                <span>Заказ №{{ o.id }}</span>
+                <span>на сумму {{ o.amount }} руб.</span>
+                <span>Пользователь: {{ o.user_id }}</span>
+                <span>{{ o.created_at }}</span>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:active, :focus {
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Calibri;
+    color: white;
+    background-color: #303030;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header_link {
+    margin: 0 10px;
+}
+
+footer {
+    padding: 10px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.plug {
+    flex-grow: 1;
+}
+
+button,
+input[type="submit"] {
+    background-color: #303030;
+    color: white;
+    font-family: Calibri;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    transition: 0.4s;
+    background-color: transparent;
+}
+
+span {
+    line-height: 25px;
+}
+
+.products_block {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+.catalog_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.5);
+    margin: 10px 0;
+}
+
+.catalog_item img {
+    width: 120px;
+    border-radius: 5px;
+}
+
+.product_title {
+    font-weight: 900;
+}
+
+.product_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.product_box img {
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 500px;
+}
+
+.login {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border-right: 2px solid #303030;
+}
+
+.register {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+}
+
+.logout {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.login:hover,
+.register:hover,
+.logout:hover {
+    transition: 0.4s;
+    background-color: transparent;
+}
