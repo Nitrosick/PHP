@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.title }}{% endblock %}
+
+{% block main %}
+    <div class="product_box">
+        <h2>{{ product.title }}</h2>
+        <img src="/gb/public/images/{{ product.image }}" alt="product">
+        <span>{{ product.description }}</span>
+        <span>Цена: {{ product.price }} руб.</span>
+
+        <form method='post' enctype='multipart/form-data' action="{{ path('cartadd') }}">
+            <input type='hidden' name='product_id' value="{{ product.id }}">
+            <input type='submit' name='to_cart' value='В корзину'>
+        </form>
+    </div>
+{% endblock %}
