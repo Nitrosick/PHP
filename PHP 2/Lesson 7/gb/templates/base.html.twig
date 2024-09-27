@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('style.css') }}">
+        {% block stylesheets %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <a href="{{ path('catalog') }}" class="logo">LOGO</a>
+            <div class="plug"></div>
+            <a href="{{ path('catalog') }}" class="header_link">Каталог</a>
+            <a href="{{ path('cart', {'id':'1'}) }}" class="header_link">Корзина</a>
+            <a href="{{ path('show_orders') }}" class="header_link">Заказы</a>
+
+            {% if app.user %}
+                <a href="{{ path('app_logout') }}" class="logout">Выйти</a>
+            {% else %}
+                <a href="{{ path('app_login') }}" class="login">Войти</a>
+                <a href="{{ path('app_register') }}" class="register">Регистрация</a>
+            {% endif %}
+        </header>
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+        <footer></footer>
+    </body>
+</html>
